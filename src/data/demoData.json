@@ -1,0 +1,218 @@
+{
+  "profile": {
+    "name": "Prabhat Kubal",
+    "sportFocus": "Hybrid endurance",
+    "goal": "Build toward a strong September half marathon",
+    "raceDate": "2026-09-20",
+    "weeklyHours": 7,
+    "experience": "Intermediate",
+    "privacyMode": true,
+    "units": "Metric",
+    "notifications": true
+  },
+  "integrations": {
+    "Strava": true,
+    "Apple Health": true,
+    "Fitbit": false
+  },
+  "theme": "light",
+  "workouts": [
+    {
+      "id": "w01",
+      "date": "2026-07-01",
+      "title": "Easy aerobic run",
+      "sport": "Run",
+      "duration": 44,
+      "distance": 7.2,
+      "intensity": "Aerobic",
+      "load": 42,
+      "status": "Done",
+      "rpe": 4,
+      "fueling": "Water only",
+      "note": "Comfortable cadence, kept HR under cap."
+    },
+    {
+      "id": "w02",
+      "date": "2026-07-02",
+      "title": "Strength foundation",
+      "sport": "Strength",
+      "duration": 38,
+      "distance": 0,
+      "intensity": "Aerobic",
+      "load": 34,
+      "status": "Done",
+      "rpe": 5,
+      "fueling": "Protein after",
+      "note": "Single-leg work felt stable."
+    },
+    {
+      "id": "w03",
+      "date": "2026-07-03",
+      "title": "Tempo intervals",
+      "sport": "Run",
+      "duration": 52,
+      "distance": 9.1,
+      "intensity": "Tempo",
+      "load": 71,
+      "status": "Done",
+      "rpe": 7,
+      "fueling": "Banana before",
+      "note": "Last rep faded a little, useful signal."
+    },
+    {
+      "id": "w04",
+      "date": "2026-07-04",
+      "title": "Recovery swim",
+      "sport": "Swim",
+      "duration": 28,
+      "distance": 1.1,
+      "intensity": "Recovery",
+      "load": 16,
+      "status": "Done",
+      "rpe": 2,
+      "fueling": "Normal breakfast",
+      "note": "Shoulders loose, breathing relaxed."
+    },
+    {
+      "id": "w05",
+      "date": "2026-07-05",
+      "title": "Long ride with fueling practice",
+      "sport": "Ride",
+      "duration": 94,
+      "distance": 38.4,
+      "intensity": "Aerobic",
+      "load": 78,
+      "status": "Done",
+      "rpe": 6,
+      "fueling": "52g carbs/hour",
+      "note": "Energy stayed steady after hour one."
+    },
+    {
+      "id": "w06",
+      "date": "2026-07-06",
+      "title": "Mobility and recovery spin",
+      "sport": "Ride",
+      "duration": 35,
+      "distance": 12.6,
+      "intensity": "Recovery",
+      "load": 20,
+      "status": "Adjusted",
+      "rpe": 2,
+      "fueling": "Electrolytes",
+      "note": "Reduced from threshold ride because readiness dipped."
+    },
+    {
+      "id": "w07",
+      "date": "2026-07-07",
+      "title": "AI-adjusted recovery session",
+      "sport": "Run",
+      "duration": 30,
+      "distance": 4.8,
+      "intensity": "Recovery",
+      "load": 16,
+      "status": "Adjusted",
+      "rpe": 3,
+      "fueling": "Light snack",
+      "note": "Readiness is under target, so intensity moved down."
+    },
+    {
+      "id": "w08",
+      "date": "2026-07-08",
+      "title": "Strength foundation",
+      "sport": "Strength",
+      "duration": 40,
+      "distance": 0,
+      "intensity": "Aerobic",
+      "load": 36,
+      "status": "Planned",
+      "rpe": 0,
+      "fueling": "Protein after",
+      "note": "Single-leg stability and posterior chain."
+    },
+    {
+      "id": "w09",
+      "date": "2026-07-09",
+      "title": "Threshold progression",
+      "sport": "Run",
+      "duration": 60,
+      "distance": 10.4,
+      "intensity": "Threshold",
+      "load": 85,
+      "status": "Planned",
+      "rpe": 0,
+      "fueling": "35g carbs before",
+      "note": "Only run if HRV rebounds above baseline."
+    },
+    {
+      "id": "w10",
+      "date": "2026-07-10",
+      "title": "Technique swim",
+      "sport": "Swim",
+      "duration": 36,
+      "distance": 1.5,
+      "intensity": "Aerobic",
+      "load": 29,
+      "status": "Planned",
+      "rpe": 0,
+      "fueling": "Normal breakfast",
+      "note": "Low stress aerobic work."
+    },
+    {
+      "id": "w11",
+      "date": "2026-07-11",
+      "title": "Long run",
+      "sport": "Run",
+      "duration": 82,
+      "distance": 14.8,
+      "intensity": "Aerobic",
+      "load": 79,
+      "status": "Planned",
+      "rpe": 0,
+      "fueling": "45g carbs/hour",
+      "note": "Keep first 30 minutes deliberately easy."
+    },
+    {
+      "id": "w12",
+      "date": "2026-07-12",
+      "title": "Full rest",
+      "sport": "Strength",
+      "duration": 20,
+      "distance": 0,
+      "intensity": "Recovery",
+      "load": 8,
+      "status": "Planned",
+      "rpe": 0,
+      "fueling": "Iron-rich meal",
+      "note": "Mobility only if legs feel heavy."
+    }
+  ],
+  "recovery": [
+    { "date": "2026-07-01", "day": "Wed", "hrv": 66, "sleep": 7.4, "soreness": 3, "readiness": 84, "restingHr": 51, "mood": "Fresh" },
+    { "date": "2026-07-02", "day": "Thu", "hrv": 64, "sleep": 7.2, "soreness": 3, "readiness": 81, "restingHr": 52, "mood": "Steady" },
+    { "date": "2026-07-03", "day": "Fri", "hrv": 61, "sleep": 6.8, "soreness": 4, "readiness": 75, "restingHr": 54, "mood": "Focused" },
+    { "date": "2026-07-04", "day": "Sat", "hrv": 59, "sleep": 6.2, "soreness": 5, "readiness": 68, "restingHr": 56, "mood": "Heavy" },
+    { "date": "2026-07-05", "day": "Sun", "hrv": 63, "sleep": 7.1, "soreness": 4, "readiness": 77, "restingHr": 53, "mood": "Good" },
+    { "date": "2026-07-06", "day": "Mon", "hrv": 58, "sleep": 6.4, "soreness": 5, "readiness": 63, "restingHr": 57, "mood": "Flat" },
+    { "date": "2026-07-07", "day": "Tue", "hrv": 67, "sleep": 8.0, "soreness": 2, "readiness": 89, "restingHr": 50, "mood": "Fresh" }
+  ],
+  "activities": [
+    { "source": "Strava", "label": "Tempo intervals", "syncedAt": "2026-07-03 19:45", "status": "Synced", "detail": "9.1 km, 5:04/km avg pace" },
+    { "source": "Apple Health", "label": "Sleep and HRV", "syncedAt": "2026-07-07 07:10", "status": "Synced", "detail": "8.0h sleep, HRV 67 ms" },
+    { "source": "Fitbit", "label": "Readiness", "syncedAt": "Not connected", "status": "Off", "detail": "Connect to compare readiness models" }
+  ],
+  "bloodMarkers": [
+    { "name": "Ferritin", "value": 42, "unit": "ng/mL", "status": "Watch", "note": "Adequate, but trending down during build weeks." },
+    { "name": "Vitamin D", "value": 31, "unit": "ng/mL", "status": "Low-normal", "note": "Flag for nutrition follow-up." },
+    { "name": "B12", "value": 520, "unit": "pg/mL", "status": "Good", "note": "No action needed." }
+  ],
+  "racePredictions": [
+    { "event": "5K", "current": "23:08", "target": "22:30", "confidence": 79 },
+    { "event": "10K", "current": "48:40", "target": "47:30", "confidence": 73 },
+    { "event": "Half marathon", "current": "1:48:20", "target": "1:44:00", "confidence": 68 }
+  ],
+  "achievements": [
+    { "title": "Seven-day training streak", "detail": "Every planned session logged or consciously adjusted.", "tone": "green" },
+    { "title": "Recovery respected", "detail": "Two intense days were downshifted before risk spiked.", "tone": "blue" },
+    { "title": "Fueling consistency", "detail": "Carb notes captured for both long sessions.", "tone": "orange" }
+  ]
+}

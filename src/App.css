@@ -218,12 +218,24 @@ h3 {
   align-items: start;
 }
 
+.three-column {
+  display: grid;
+  grid-template-columns: 360px minmax(320px, 1fr) 360px;
+  gap: 18px;
+  align-items: start;
+}
+
 .hero-panel,
 .panel,
 .stat,
 .workout-card,
 .integration,
-.privacy-note {
+.privacy-note,
+.computed-card,
+.activity-item,
+.race-card,
+.achievement,
+.empty-state {
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -349,9 +361,27 @@ h3 {
 }
 
 .panel-title {
-  justify-content: space-between;
+  align-items: flex-start;
   gap: 12px;
   margin-bottom: 18px;
+}
+
+.panel-title > div {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 10px;
+  align-items: center;
+}
+
+.panel-icon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: var(--green);
+  background: var(--soft-green);
+  grid-row: span 2;
 }
 
 .panel-title p {
@@ -375,6 +405,11 @@ h3 {
 .workout-list,
 .insight-list,
 .integration-list,
+.activity-feed,
+.mini-list,
+.race-list,
+.risk-bars,
+.achievement-grid,
 .form-stack {
   display: grid;
   gap: 12px;
@@ -383,11 +418,31 @@ h3 {
 .workout-card {
   border-radius: 18px;
   padding: 16px;
+  text-align: left;
 }
 
 .workout-card.featured {
   border-color: var(--selected-border);
   background: var(--selected);
+}
+
+.workout-card.compact {
+  box-shadow: none;
+  padding: 13px;
+}
+
+.workout-select {
+  display: block;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 18px;
+  text-align: inherit;
+}
+
+.workout-select.active .workout-card {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px var(--focus);
 }
 
 .workout-main {
@@ -426,6 +481,43 @@ h3 {
   padding: 8px 11px;
   font-size: 13px;
   font-weight: 800;
+}
+
+.mini-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.mini-row:last-child {
+  border-bottom: 0;
+}
+
+.mini-row > span {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.mini-row strong,
+.activity-item strong,
+.race-card strong,
+.achievement strong {
+  display: block;
+  color: var(--text);
+}
+
+.mini-row small,
+.activity-item small,
+.race-card small,
+.race-card em {
+  color: var(--muted);
+  font-size: 12px;
+  font-style: normal;
 }
 
 .pill {
@@ -492,6 +584,25 @@ textarea:focus {
   gap: 12px;
 }
 
+.computed-card {
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--selected);
+}
+
+.computed-card span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.computed-card strong {
+  font-size: 32px;
+  color: var(--text);
+}
+
 .insight {
   display: flex;
   gap: 12px;
@@ -555,6 +666,15 @@ textarea:focus {
   flex-wrap: wrap;
 }
 
+.secondary-button {
+  background: var(--surface);
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 16px;
+}
+
 .upload-button {
   position: relative;
 }
@@ -580,9 +700,174 @@ textarea:focus {
   margin: 0;
 }
 
+.activity-feed.separated {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.activity-item {
+  display: flex;
+  gap: 12px;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: none;
+}
+
+.activity-item p {
+  margin: 4px 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--muted);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.dot.synced {
+  background: var(--green);
+}
+
+.race-card {
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: none;
+}
+
+.confidence {
+  height: 9px;
+  border-radius: 999px;
+  background: var(--track);
+  overflow: hidden;
+  margin: 12px 0 8px;
+}
+
+.confidence span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--green), var(--blue));
+}
+
+.risk-bar {
+  display: grid;
+  gap: 8px;
+}
+
+.risk-bar > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.risk-bar strong {
+  color: var(--text);
+}
+
+.achievement-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.achievement {
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: none;
+}
+
+.achievement svg {
+  margin-bottom: 10px;
+}
+
+.achievement.green svg {
+  color: var(--green);
+}
+
+.achievement.blue svg {
+  color: var(--blue);
+}
+
+.achievement.orange svg {
+  color: var(--orange);
+}
+
+.achievement p,
+.empty-state p {
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+.empty-state {
+  border-radius: 18px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: none;
+}
+
+.empty-state svg {
+  color: var(--green);
+  margin: 0 auto 10px;
+}
+
+.json-preview {
+  margin: 18px 0 0;
+  max-height: 520px;
+  overflow: auto;
+  border-radius: 16px;
+  padding: 16px;
+  background: var(--page);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.error-text {
+  color: var(--danger);
+  font-weight: 800;
+  margin: 12px 0 0;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 14px;
+  background: var(--page);
+  border: 1px solid var(--border);
+  margin-top: 14px;
+}
+
+.segmented button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--muted);
+  background: transparent;
+  font-weight: 800;
+}
+
+.segmented button.active {
+  color: var(--text);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
 @media (max-width: 1100px) {
   .app-shell,
-  .two-column {
+  .two-column,
+  .three-column {
     grid-template-columns: 1fr;
   }
 
@@ -625,6 +910,7 @@ textarea:focus {
   .content-grid,
   .metric-row,
   .metric-row.compact,
+  .achievement-grid,
   .split-fields,
   nav {
     grid-template-columns: 1fr;
